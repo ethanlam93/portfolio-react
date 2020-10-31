@@ -28,7 +28,7 @@ function Header ({currentPage}) {
                             <Link className={`navbar-item  ${currentPage.portfolio}`}  to="/portfolio-react/portfolio/">
                                 Portfolio
                             </Link>
-                            <a className={`navbar-item  ${currentPage.contact}`}  href="/contact">
+                            <a className={`navbar-item  ${currentPage.contact}`}  href="/portfolio-react/contact">
                                 Contact
                             </a>
                             <a className="navbar-item" href={resume} type="application/pdf"
