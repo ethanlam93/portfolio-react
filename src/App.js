@@ -13,40 +13,11 @@ import HeroBody from "./components/component/HeroBody"
 
 
 function App() {
-  const [state, setState] = useState({
-    home: "",
-    portfolio: "",
-    contact: ""
-  })
 
-  useEffect(() => {
-    const path = window.location.pathname;
-    console.log(path)
-    if (path === "/contact") {
-      setState({
-        ...state,
-        contact: "page"
-      })
-    }
-    else if (path === "/portfolio") {
-      setState({
-        ...state,
-        portfolio: "page",
-
-      })
-    }
-    else if (path === "/" || path === "/home") {
-      setState({
-        ...state,
-        home: "page",
-
-      })
-    }
-  });
 
   return (<>
     <Router basename="/portfolio-react">
-      <Header currentPage={state} />
+      <Header />
       <HeroBody>
         <Switch>
           <Route exact path={["/"]} component={Home} />
