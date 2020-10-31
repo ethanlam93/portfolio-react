@@ -22,10 +22,10 @@ function Header ({currentPage}) {
                     </div>
                     <div id="navbarMenuHeroA" className={`navbar-menu ${ isActive ? `is-active` : ``}`}>
                         <div className="navbar-end">
-                            <a className={`navbar-item  ${currentPage.home}`} href="/">
+                            <a className={`navbar-item  ${currentPage.home}`} href="/portfolio-react/">
                                 Home
                             </a>
-                            <a className={`navbar-item  ${currentPage.portfolio}`}  href="/portfolio">
+                            <a className={`navbar-item  ${currentPage.portfolio}`}  href="/portfolio-react/portfolio/">
                                 Portfolio
                             </a>
                             <a className={`navbar-item  ${currentPage.contact}`}  href="/contact">
