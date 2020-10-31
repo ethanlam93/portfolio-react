@@ -1,9 +1,11 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/logo2.png";
 import resume from "../../images/Resume-Ethan.pdf";
 
-function Header ({currentPage}) {
+function Header () {
+    const currentPage = useLocation().pathname;
+    console.log(currentPage)
     const [isActive, setActive] = useState(false);
     return (
         <div className="hero-head">
@@ -22,13 +24,13 @@ function Header ({currentPage}) {
                     </div>
                     <div id="navbarMenuHeroA" className={`navbar-menu ${ isActive ? `is-active` : ``}`}>
                         <div className="navbar-end">
-                            <Link className={`navbar-item  ${currentPage.home}`} to="/portfolio-react">
+                            <Link className={`navbar-item  ${currentPage === "/portfolio-react" ? `page` : ``}`} to="/portfolio-react">
                                 Home
                             </Link>
-                            <Link className={`navbar-item  ${currentPage.portfolio}`}  to="/portfolio/">
+                            <Link className={`navbar-item  ${currentPage === "/portfolio/" ? `page` : ``}`}  to="/portfolio/">
                                 Portfolio
                             </Link>
-                            <Link className={`navbar-item  ${currentPage.contact}`}  to="/contact/">
+                            <Link className={`navbar-item ${currentPage === "/contact/" ? `page` : ``} `}  to="/contact/">
                                 Contact
                             </Link>
                             <a className="navbar-item" href={resume} type="application/pdf"
