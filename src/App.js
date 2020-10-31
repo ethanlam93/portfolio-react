@@ -45,7 +45,7 @@ function App() {
   });
 
   return (<>
-    <Router>
+    <Router basename="/portfolio-react">
       <Header currentPage={state} />
       <HeroBody>
         <Switch>
@@ -54,7 +54,6 @@ function App() {
           <Route exact path={["/portfolio-react/contact"]} component={Contact} />
           <Route component={noMatch} />
         </Switch>
-
       </HeroBody>
       <Footer />
     </Router>

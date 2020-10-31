@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/logo2.png";
 import resume from "../../images/Resume-Ethan.pdf";
 
@@ -25,9 +25,9 @@ function Header ({currentPage}) {
                             <a className={`navbar-item  ${currentPage.home}`} href="/portfolio-react/">
                                 Home
                             </a>
-                            <a className={`navbar-item  ${currentPage.portfolio}`}  href="/portfolio-react/portfolio/">
+                            <Link className={`navbar-item  ${currentPage.portfolio}`}  to="/portfolio-react/portfolio/">
                                 Portfolio
-                            </a>
+                            </Link>
                             <a className={`navbar-item  ${currentPage.contact}`}  href="/contact">
                                 Contact
                             </a>
