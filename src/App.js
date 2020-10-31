@@ -49,9 +49,9 @@ function App() {
       <Header currentPage={state} />
       <HeroBody>
         <Switch>
-          <Route exact path={["/portfolio-react/"]} component={Home} />
-          <Route exact path={["/portfolio-react/portfolio/"]} component={Portfolio} />
-          <Route exact path={["/portfolio-react/contact"]} component={Contact} />
+          <Route exact path={["/"]} component={Home} />
+          <Route exact path={["/portfolio/"]} component={Portfolio} />
+          <Route exact path={["/contact"]} component={Contact} />
           <Route component={noMatch} />
         </Switch>
       </HeroBody>
